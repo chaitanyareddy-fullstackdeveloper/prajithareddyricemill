@@ -80,9 +80,21 @@
 
 .custom-nav-link:hover, .custom-nav-link.active {
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  /* box-shadow: 0 4px 16px rgba(0,0,0,0.12); */
   color: #fff !important;
   text-decoration: none;
+}
+
+.custom-link-1{
+  margin: 0 12px;
+  padding: 10px 32px;
+  border-radius: 16px;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-align: center;
+  background: rgba(193, 27, 27, 0.711) !important;
 }
 
 /* Navbar items alignment */

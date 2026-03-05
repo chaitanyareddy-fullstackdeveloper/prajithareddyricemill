@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
+import { Navigate } from "react-router";
 
 export default function Home() {
   const lines = [
@@ -37,6 +38,8 @@ export default function Home() {
 
     return () => clearTimeout(pause);
   }, [charIndex, currentLine, lines]);
+
+  
 
   return (
     <div className="home-container">

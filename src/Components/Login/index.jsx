@@ -1,6 +1,9 @@
 import { useState } from "react";
+import Cookies from "js-cookie";
 import { useNavigate } from "react-router";
+import { Navigate } from "react-router";
 import "./index.css";
+import Home from "../Home";
 
 const LoginForm = () => {
   const [userName, setUserName] = useState("");
@@ -17,8 +20,18 @@ const LoginForm = () => {
 
   const loginUser = (event) => {
     event.preventDefault();  // prevent page reload
-    navigate("/Home", { replace: true });
+    const authTokenData=userName+'123456' 
+    Cookies.set("auth_token",JSON.stringify({authTokenData},{ expires: 1 }))
+    navigate("/", { replace: true });
+
   };
+
+  const authToken = Cookies.get("auth_token")
+  if (authToken){
+    return (
+     <Navigate to='/'/>
+    )
+  }
 
   return (
     <div className="login-container">
