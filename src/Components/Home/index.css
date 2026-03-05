@@ -1,0 +1,59 @@
+:root{
+  --bg: #F5E6CA;     /* light beige */
+  --accent: #2E5D34; /* deep green */
+  --gold: #C8A951;
+  --brown: #4B3A2F;
+}
+
+* { box-sizing: border-box; }
+body { margin:0; font-family: "Open Sans", system-ui, Arial; background: var(--bg); color: var(--brown); }
+
+/* container */
+.home-container {
+  max-width: 920px;
+  margin: 36px auto;
+  padding: 24px;
+}
+
+/* common style for each line block */
+.line-style {
+  background: rgba(255,255,255,0.85);
+  padding: 14px 18px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border-left: 6px solid var(--accent);
+  box-shadow: 0 6px 16px rgba(75,58,47,0.06);
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--brown);
+  white-space: pre-wrap; /* keep wrapping for long lines */
+}
+
+/* styling for the currently-typing line */
+.typing {
+  /* Ensure caret aligns with text baseline */
+  display: inline-block;
+}
+
+/* blinking caret */
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--accent);
+  margin-left: 8px;
+  vertical-align: bottom;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* responsive tweak */
+@media (max-width: 640px){
+  .home-container { padding: 16px; }
+  .line-style { font-size: 1rem; padding: 12px; }
+}
