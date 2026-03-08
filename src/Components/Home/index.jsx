@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-import { Navigate } from "react-router";
+// import { Navigate } from "react-router";
 
 export default function Home() {
   const lines = [

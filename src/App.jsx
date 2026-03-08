@@ -8,18 +8,19 @@ import Contact from './Components/Contact';
 import NotFound from './Components/NotFound';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-import LoginForm from './Components/Login';
-import ProtectedRoute from './ProtectedRoute';
+// import LoginForm from './Components/Login';
+// import ProtectedRoute from './ProtectedRoute';
 
 const App = () => (                                                                                     
     <BrowserRouter>
+    <Header/>
       <Routes>
-        <Route path='/' element={<ProtectedRoute element={<Home/>} />}/>
-        <Route path='/login' element={<LoginForm/>}/>
-        <Route path="/about" element={<ProtectedRoute element={<About/>} />} />
-        <Route path="/manufacture-process" element={<ProtectedRoute element={<ManufactureProcess/>} />} /> 
-        <Route path="/types-of-rice" element={<ProtectedRoute element={<RiceTypes/>}/>} />
-        <Route path="/contact" element={<ProtectedRoute element = {<Contact />}/>} />
+        <Route path='/' element={<Home/>} />
+        {/* <Route path='/login' element={<LoginForm/>}/> */}
+        <Route path="/about" element={<About/>}  />
+        <Route path="/manufacture-process" element={<ManufactureProcess/>}  /> 
+        <Route path="/types-of-rice" element={<RiceTypes/>} />
+        <Route path="/contact"  element = {<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

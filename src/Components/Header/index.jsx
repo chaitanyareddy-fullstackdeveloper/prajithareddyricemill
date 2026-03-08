@@ -27,7 +27,7 @@ const Header = () => {
               <Nav.Link className="custom-nav-link" href="types-of-rice">Rice Types</Nav.Link>
               <Nav.Link className="custom-nav-link" href="manufacture-process">Manufacture Process</Nav.Link>
               <Nav.Link className="custom-nav-link" href="contact">Contact</Nav.Link>
-              <Nav.Link className="custom-link-1" href="/login" onClick={()=>{Cookies.remove("auth_token")}}>Logout</Nav.Link>
+              {/* <Nav.Link className="custom-link-1" href="/login" onClick={()=>{Cookies.remove("auth_token")}}>Logout</Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
